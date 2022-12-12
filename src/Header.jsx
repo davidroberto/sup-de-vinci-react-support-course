@@ -6,7 +6,7 @@ const Header = () => {
     const menuItems = [
         {
             name: "Home",
-            link: "/"
+            link: "/",
         },
         {
             name: "About",
@@ -28,7 +28,7 @@ const Header = () => {
                 <ul>
                     {menuItems.map((item) => {
                         return (
-                            <li>
+                            <li key={item.name}>
                                 <a href={item.link}>{item.name}</a>
                             </li>
                         )
