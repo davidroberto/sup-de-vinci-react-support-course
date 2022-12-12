@@ -2,7 +2,13 @@
 // grâce à la syntaxe props.currentArticle (currentArticle correspond à la clé de l'objet passé en props
 // dans le composant ListArticles)
 
-const ShowArticle = ({props}) => {
+
+// séparer le composant Articles en deux composants : un composant ListArticles et un composant ShowArticle
+// le composant ListArticles s'occupe uniquement de récupérer les articles sur une api (ici juste créer la variable articles, donc un fake appel d'api)
+// il faut la boucle sur tous les articles
+// pour chaque article, on utilise un composant ShowArticle dont l'unique rôle est d'afficher un seul article
+
+const ShowArticle = (props) => {
 
     const article = props.currentArticle;
 

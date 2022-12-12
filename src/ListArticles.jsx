@@ -1,4 +1,4 @@
-import ShowArticle from "./ShowArticle";
+// import ShowArticle from "./ShowArticle";
 
 const ListArticles = () => {
 
@@ -39,7 +39,13 @@ const ListArticles = () => {
         <section>
             {articles.map((article) => {
                 return (
-                    <ShowArticle currentArticle={article} />
+                    <article key={article.id}>
+                        <h1>{article.title}</h1>
+                        <h2>{article.subtitle}</h2>
+                        <p>{article.content}</p>
+                        <i>{article.date.toDateString()}</i>
+                        <img src={article.image} alt={article.title} />
+                    </article>
                 )
             })}
         </section>
