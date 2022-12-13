@@ -1,4 +1,6 @@
 import { useState } from "react";
+import CocktailSearchForm from "./CocktailSearchForm";
+import CocktailSearchResults from "./CocktailSearchResults";
 
 const SearchCocktails = () => {
 
@@ -31,18 +33,9 @@ const SearchCocktails = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}> 
-                <input type="text" name="search" placeholder="Search for a cocktail" />
-                <button type="submit">Search</button>
-            </form>
+            <CocktailSearchForm formCallback={handleSubmit}/>
 
-            {cocktails.drinks && cocktails.drinks.map((cocktail) => {
-                return (
-                    <div>
-                        <h1>{cocktail.strDrink}</h1>
-                    </div>
-                )
-            })}
+            <CocktailSearchResults results={cocktails}/>
         </div>
     )
 }
