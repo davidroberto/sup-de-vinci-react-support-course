@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import ListCocktails from "./ListCocktails";
 import RandomCocktail from "./RandomCocktail";
+import SearchCocktails from "./SearchCocktails";
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
       <Header />
       <RandomCocktail />
       <ListCocktails />
-
+      <SearchCocktails />
       <Footer />
     </div>
   );
